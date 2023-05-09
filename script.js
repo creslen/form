@@ -72,12 +72,14 @@ const appendButton = (label = "No label", placeholder = "No placeholder") => {
     el.setAttribute('placeholder', placeholder)
     el.setAttribute('type','button')
     el.textContent = label;
-
+    el.addEventListener('click', function() {
+        alert('inserted button!');
+    });
     let lbl = document.createElement('label');
-    lbl.textContent = "You have inserted a button->";
+    lbl.textContent = "You have inserted a button";
   
   
-    wrap.append(lbl,el,del)
+    wrap.append(el,lbl,del)
     document.querySelector("#elements").append(wrap) 
     id++
 }
