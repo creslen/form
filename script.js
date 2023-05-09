@@ -46,13 +46,11 @@ const appendRadio = (label = "No label", placeholder = "No placeholder") => {
     el.setAttribute('placeholder', placeholder)
     el.setAttribute('type','radio')
     let lbl=document.createElement('label')
-    lbl.textContent =label
+    lbl.textContent =label,"you have inserted radio"
+    lbl.textContent ="you have inserted radio"
     lbl.setAttribute('class','mx-1 mt-1')
-    let txt = document.createElement('text')
-    txt.textContent="You have created an Element  "
-
-
-    wrap.append(lbl,el,txt,del)
+  
+    wrap.append(lbl,el,del)
     document.querySelector("#elements").append(wrap) 
     id++
 }
